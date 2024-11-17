@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Sección principal de contacto */
+        .contacto-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Mapa Google */
+        .mapaGoogle {
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mapaGoogle iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Columna de Datos */
+        .columnaDatos {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 50vh;
+        }
+
+        .datosContacto, .formulario {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+        }
+
+        .datosContacto {
+            width: 40vw;
+            flex-direction: column;
+        }
+
+        .formulario {
+            width: 60vw;
+            flex-direction: column;
+        }
+
+        /* Estilos de lista de datos de contacto */
+        .lista_2 {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .li_titulo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007d8b;
+        }
+
+        .li_texto {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Estilos para el formulario */
+        #formulario_2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 50vh;
+            width: 70vw;
+        }
+
+        #formulario_2 input, #formulario_2 button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 80%;
+            font-size: 1rem;
+        }
+
+        #formulario_2 input:focus, #formulario_2 button:focus {
+            border-color: #007d8b;
+            outline: none;
+        }
+
+        #formulario_2 button {
+            background-color: #007d8b;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        #formulario_2 button:hover {
+            background-color: #004f59;
+        }
+
+        /* Adaptabilidad */
+        @media screen and (max-width: 768px) {
+            .columnaDatos {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .datosContacto, .formulario {
+                width: 100%;
+            }
+
+            .mapaGoogle {
+                height: 40vh;
+            }
+
+            #formulario_2 {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contacto-container">
+        <!-- Mapa de Google -->
+        <div class="mapaGoogle">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.327228397813!2d-122.26047406042812!3d37.5237829104854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f98af85383a77%3A0x5a0512bbcc5eeb58!2sElectronic%20Arts!5e0!3m2!1ses-419!2suy!4v1731866399488!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+        </div>
+
+        <!-- Datos de contacto y formulario -->
+        <div class="columnaDatos">
+            <!-- Datos de contacto -->
+            <div class="datosContacto">
+                <ul class="lista_2">
+                    <li class="li_titulo"><i class="fa-solid fa-location-dot"></i> Dirección</li>
+                    <li class="li_texto">Dr. Homero Gregorio y José Quesada</li>
+                    <li class="li_titulo"><i class="fa-solid fa-phone"></i> Teléfono</li>
+                    <li class="li_texto">+123 456 789</li>
+                    <li class="li_titulo"><i class="fa-solid fa-envelope"></i> Correo</li>
+                    <li class="li_texto">contacto@ejemplo.com</li>
+                </ul>
+            </div>
+
+            <!-- Formulario -->
+            <div class="formulario">
+                <form id="formulario_2">
+                    <span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </span>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

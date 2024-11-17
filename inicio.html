@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+
+        #logo img {
+            height: 40px;
+        }
+
+        .nav_horizontal a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border: 2px solid #007d8b;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav_horizontal a:hover {
+            text-decoration: none;
+            background-color: #007d8b;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007d8b;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #004f59;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="Recursos/IMG/logo.jpeg" alt="Logo de la App">
+        </div>
+        <nav class="nav_horizontal">
+            <a href="index.html">Inicio</a>
+            <a href="javascript:void(0);" onclick="mostrarFunciones()">Funciones</a>
+            <a href="#seccion_descargas">Descargas</a>
+            <a href="#seccion_comentarios">Comentarios</a>
+        </nav>
+    </header>
+    
+    <h1>Bienvenido al Menú Principal</h1>
+    <button onclick="window.location.href='index.html'">Volver a Inicio</button>
+
+    <script>
+        // Aquí podrías agregar la funcionalidad de la sección de funciones si deseas mostrarla
+        function mostrarFunciones() {
+            alert("Sección de Funciones seleccionada.");
+        }
+    </script>
+</body>
+</html>
